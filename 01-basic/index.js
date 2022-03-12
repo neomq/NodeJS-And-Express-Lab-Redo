@@ -28,6 +28,17 @@ app.get('/contact-us', function(req,res){
     res.send('<h1>contact us</h1>');
 })
 
+// the following route allows us to specify a full name parameter
+app.get('/say-hi/:fullname', function(req,res){
+    let fullname = req.params.fullname; // extract value of the fullname parameter
+    // note: res.send() must always send back a string
+    res.send("Hello, " + fullname);
+})
+
+app.get('/say-hi/:fullname/:lastname', function(req,res){
+    res.send("Hello, " + req.params.fullname + " " + req.params.lastname)
+})
+
 // 4.
 // Start the server
 // 1st arg of app.listen is port number
