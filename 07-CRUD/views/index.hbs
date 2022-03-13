@@ -1,0 +1,33 @@
+{{#extends "base"}}
+
+    {{#block "title"}}Sightings{{/block}}
+
+    {{#block "content"}}
+    <a class="btn btn-primary my-3" href="/sightings/create" role="button">Add Sightings</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Description</th>
+                <th scope="col">Food</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each sightings}}
+                <tr>
+                    <th scope="row">{{this._id}}</th>
+                    <td>{{this.description}}</td>
+                    <td>{{this.food}}</td>
+                    <td>
+                        <a class="btn btn-outline-primary" href="/sightings/{{this._id}}/update" role="button">Edit</a>
+                        <a class="btn btn-outline-danger" href="/sightings/{{this._id}}/delete" role="button">Delete</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    {{/block}}
+
+{{/extends}}

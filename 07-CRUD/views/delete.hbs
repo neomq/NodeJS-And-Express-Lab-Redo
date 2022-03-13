@@ -1,0 +1,17 @@
+{{#extends 'base'}}
+
+{{#block "title"}}Delete Sighting{{/block}}
+
+{{#block "content"}}
+    <form method="POST">
+        <div class="alert alert-danger mt-3">
+            Are you sure you want to delete the sighting with the description {{sighting.description}}?
+        </div>
+
+        <input type="submit" class="btn btn-danger" value="Confirm delete"/>
+        <a class="btn btn-primary" href="/" role="button">Cancel delete</a>
+    </form>
+
+{{/block}}
+
+{{/extends}}
