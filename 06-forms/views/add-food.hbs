@@ -1,0 +1,81 @@
+{{#extends 'base'}}
+
+    {{#block "content"}}
+
+    <h1>Enter your food</h1>
+
+    <form method="POST">
+        <div class="col-4">
+            <div>
+                <label class="form-label fs-5">Food Name:</label>
+                <input type="text" name="foodName" class="form-control">
+            </div>
+            
+            <div class="mt-3">
+                <label class="form-label fs-5">Calories:</label>
+                <input type="text" name="calories" class="form-control">
+            </div>
+
+            <div class="mt-3">
+                <label class="form-label fs-5">Description:</label>
+                <textarea class="form-control" name="Description"></textarea>
+            </div>
+            
+            <div class="mt-3 d-flex">
+                <div>
+                    <label class="form-check-label fs-5">Meal: </label>
+                </div>
+                
+                <div class="form-check form-check-inline ms-3">
+                    <input class="form-check-input" type="radio" name="meal" value="breakfast" checked>
+                    <label class="form-check-label fs-5">Breakfast</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="meal" value="lunch">
+                    <label class="form-check-label fs-5">Lunch</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="meal" value="dinner">
+                    <label class="form-check-label fs-5">Dinner</label>
+                </div>
+            </div>
+
+            <div class="mt-3 d-flex">
+                <div>
+                    <label class="form-check-label fs-5">Tags: </label>
+                </div>
+                
+                <div class="form-check form-check-inline ms-3">
+                    <input class="form-check-input" type="checkbox" name="tags" value="healthy">
+                    <label class="form-check-label fs-5">Healthy</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="tags" value="organic">
+                    <label class="form-check-label fs-5">Organic</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="tags" value="vegan">
+                    <label class="form-check-label fs-5">Vegan</label>
+                </div>
+            </div>
+
+            <div class="mt-3 d-flex">
+                <div>
+                    <label class="form-check-label fs-5">Cuisine: </label>
+                </div>
+
+                <select name="cuisine" class="form-control ms-3">
+                    <option value="chinese">Chinese</option>
+                    <option value="indian">Indian</option>
+                    <option value="malay">Malay</option>
+                    <option value="western">Western</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Add Food" class="btn btn-primary mt-4">
+        </div>
+    </form>
+
+    {{/block}}
+
+{{/extends}}
